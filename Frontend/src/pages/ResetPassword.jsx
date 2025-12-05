@@ -23,7 +23,7 @@ const ResetPassword = () => {
 
     setLoading(true);
     try {
-      await axios.post(`http://localhost:8000/api/auth/reset-password/${token}`, { password });
+      await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/reset-password/${token}`, { password });
       toast.success("Password updated successfully! You can now login.");
       setTimeout(() => {
         window.location.href = "/login";

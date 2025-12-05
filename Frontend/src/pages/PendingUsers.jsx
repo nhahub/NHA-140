@@ -31,7 +31,7 @@ const PendingUsers = () => {
   const fetchPendingUsers = async () => {
     try {
       setLoading(true);
-      const res = await axios.get("http://localhost:5000/api/users/pending", {
+      const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/users/pending`, {
         headers: {
           token: `Bearer ${currentUser?.accessToken}`,
         },
@@ -57,7 +57,7 @@ const PendingUsers = () => {
     if (window.confirm("Are you sure you want to approve this donor?")) {
       try {
         await axios.put(
-          `http://localhost:5000/api/users/approve/${userId}`,
+          `${import.meta.env.VITE_API_URL}/api/users/approve/${userId}`,
           {},
           {
             headers: { token: `Bearer ${currentUser.accessToken}` },
@@ -75,7 +75,7 @@ const PendingUsers = () => {
   const handleReject = async (userId) => {
     if (window.confirm("Are you sure you want to reject and delete this account?")) {
       try {
-        await axios.delete(`http://localhost:5000/api/users/reject/${userId}`, {
+        await axios.delete(`${import.meta.env.VITE_API_URL}/api/users/reject/${userId}`, {
           headers: { token: `Bearer ${currentUser.accessToken}` },
         });
         setSuccess("Account rejected and deleted.");
@@ -84,6 +84,7 @@ const PendingUsers = () => {
         setError("Failed to reject user.");
       }
     }
+
   };
 
   // Clear messages after 4 seconds
