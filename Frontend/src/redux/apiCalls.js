@@ -14,7 +14,7 @@ export const login = async (dispatch, userCredentials, navigate) => {
     const res = await publicRequest.post(`${import.meta.env.VITE_API_URL}/api/auth/login`, userCredentials);
     dispatch(loginSuccess(res.data));
     
-    // السطر السحري اللي هيحل كل المشاكل
+    
     navigate("/admin", { replace: true });
     
   } catch (err) {
