@@ -65,10 +65,25 @@ const getDonorById = async (req, res) => {
     }
   };
 
+  const searchinDonors = async (req, res) => {
+    try {
+      const { name, email } = req.query;
+      const query = {};
+      if (name) query.name = { $regex: name, $options: "i" };
+      if (email) query.email = { $regex: email, $options: "i" };
+      const donors = await Donor.find(query);
+      res.status(200).json(donors);
+    } catch (err) {
+      console.error(err);
+      res.status(500).json({ message: "Failed to search donors." });
+    }
+  };
+
 module.exports = {
   getAllDonors,
   addDonor,
   getDonorById,
     updateDonorById,
-    deleteDonorById
+    deleteDonorById,
+    searchinDonors
 };

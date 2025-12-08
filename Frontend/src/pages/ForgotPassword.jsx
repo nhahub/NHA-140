@@ -17,7 +17,7 @@ const ForgotPassword = () => {
 
     setLoading(true);
     try {
-      await axios.post(`${process.env.VITE_API_URL}/api/auth/forgot-password`, { email });
+      await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/forgot-password`, { email });
       toast.success("Password reset link sent to your email!");
     } catch (err) {
       toast.error(err.response?.data?.message || "Email not found");

@@ -16,11 +16,14 @@ const addProspect = async (req, res) => {
   try {
     const newProspect = new Prospect(req.body);
     const savedProspect = await newProspect.save();
+    if (!savedProspect) {
+      return res.status(400).json({ message: "Failed to save prospect." });
+    } 
     res.status(201).json(savedProspect);
   } catch (err) {
     console.error(err);
     res.status(500).json({ message: "Failed to add prospect." });
-  }
+  }   
 };
 
 // DELETE a prospect
@@ -43,5 +46,18 @@ const getProspect = async (req, res) => {
     res.status(500).json({ message: "Failed to fetch prospect." });
   }
 };
+const searchinProspects = async (req, res) => {
+  try {
+    const { name, email } = req.query;
+    const query = {};
+    if (name) query.name = { $regex: name, $options: "i" };
+    if (email) query.email = { $regex: email, $options: "i" };
+    const prospects = await Prospect.find(query);
+    res.status(200).json(prospects);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: "Failed to search prospects." });
+  }
+};
 
-module.exports = { getAllProspects, addProspect, deleteProspect, getProspect };
+module.exports = { getAllProspects, addProspect, deleteProspect, getProspect, searchinProspects };

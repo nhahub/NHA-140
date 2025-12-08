@@ -90,25 +90,14 @@ function Menu() {
         {/* ===== روابط الـ Donor العادي فقط ===== */}
         {currentUser.role !== "admin" && (
           <>
-            <Link to="/dashboard/profile" onClick={() => handleActiveLink("/dashboard/profile")}>
+            <Link to={`/dashboard/profile/${currentUser._id}`} onClick={() => handleActiveLink(`/dashboard/profile/${currentUser._id}`)}>
               <li className={`flex items-center text-[20px] cursor-pointer mt-[20px] font-semibold transition-all
-                ${activeLink === "/dashboard/profile" ? "bg-red-500 text-white p-[12px] rounded-lg shadow-md" : "text-gray-700 hover:text-red-600"}`}>
+                ${activeLink === `/dashboard/profile/${currentUser._id}` ? "bg-red-500 text-white p-[12px] rounded-lg shadow-md" : "text-gray-700 hover:text-red-600"}`}>
                 <FaUser className="mr-[15px]" /> My Profile
               </li>
             </Link>
 
-            <Link to="/dashboard/notifications" onClick={() => handleActiveLink("/dashboard/notifications")}>
-              <li className={`flex items-center text-[20px] cursor-pointer mt-[20px] font-semibold transition-all relative
-                ${activeLink === "/dashboard/notifications" ? "bg-red-500 text-white p-[12px] rounded-lg shadow-md" : "text-gray-700 hover:text-red-600"}`}>
-                <FaBell className="mr-[15px]" /> Notifications
-                {unreadCount > 0 && (
-                  <span className="absolute -top-2 -right-3 bg-red-600 text-white text-xs rounded-full h-6 w-6 flex items-center justify-center">
-                    {unreadCount}
-                  </span>
-                )}
-              </li>
-            </Link>
-
+           
             <Link to="/dashboard/donations" onClick={() => handleActiveLink("/dashboard/donations")}>
               <li className={`flex items-center text-[20px] cursor-pointer mt-[20px] font-semibold transition-all
                 ${activeLink === "/dashboard/donations" ? "bg-red-500 text-white p-[12px] rounded-lg shadow-md" : "text-gray-700 hover:text-red-600"}`}>

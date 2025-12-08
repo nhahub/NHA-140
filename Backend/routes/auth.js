@@ -3,7 +3,8 @@ const router = express.Router();
 const { 
   registerUser, 
   loginUser, 
-  forgotPassword 
+  forgotPassword ,
+  updatePassword,
 } = require("../controllers/auth");
 
 const { 
@@ -20,6 +21,7 @@ const { verifyTokenAndAdmin } = require("../middleware/verifyToken");
 router.post("/register", registerUser);
 router.post("/login", loginUser);
 router.post("/forgot-password", forgotPassword);
+
 
 // Admin routes
 router.get("/pending-users", verifyTokenAndAdmin, getPendingUsers);

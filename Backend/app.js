@@ -7,7 +7,7 @@ const authRoute = require("./routes/auth");
 
 
 app.use(cors({
-  origin: process.env.FRONTEND_HOST, 
+  origin: `${process.env.FRONTEND_HOST}`, 
   credentials: true
 }));
 app.use(express.json());
@@ -26,6 +26,9 @@ app.use("/api/prospect", prospectRoutes);
 
 const donorRoutes = require("./routes/donor");
 app.use("/api/donor", donorRoutes);
+
+
+
 
 
 
