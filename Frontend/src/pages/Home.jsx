@@ -1,18 +1,4 @@
-import React from 'react'
-import Navbar from './../components/Navbar';
 import Hero from '../components/Hero';
-import Featured from './../components/Featured';
-import Contact from '../components/Contact';
-import Footer from './../components/Footer';
-import {Element} from "react-scroll"
-import { Routes, Route } from 'react-router-dom';
-import Statistics from '../components/Statistics';
-import FeaturesSection from '../components/FeaturesSection';
-import HowItWorks from '../components/HowItWorks';
-import CTA from '../components/CTA';
-import Aboutus from '../components/Aboutus';
-import WhyDonate from '../components/WhyDonate';
-import { Link } from 'react-router-dom';
 
 function Home() {
  return (
@@ -20,7 +6,7 @@ function Home() {
       
       <Hero />
 
-      {/* About Us Section - Impressive Banner Image */}
+     
     <section className="relative bg-white py-20 px-8 md:px-20 overflow-hidden">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-5xl font-extrabold text-red-700 mb-4 tracking-tight">
@@ -64,7 +50,7 @@ function Home() {
         </p>
       </div>
 
-      {/* Card 2 */}
+   
       <div className="bg-white rounded-3xl shadow-xl border-t-4 border-red-600
                       hover:shadow-red-300/50 transition duration-300 transform hover:-translate-y-1">
         <div className="overflow-hidden rounded-2xl mb-6 mx-4">
@@ -80,7 +66,7 @@ function Home() {
         </p>
       </div>
 
-      {/* Card 3 */}
+   
       <div className="bg-white rounded-3xl shadow-xl border-t-4 border-red-600
                       hover:shadow-red-300/50 transition duration-300 transform hover:-translate-y-1">
         <div className="overflow-hidden rounded-2xl mb-6 mx-4">
@@ -100,7 +86,7 @@ function Home() {
 </section>
 
 
-    {/* NEW SECTION: Donor Eligibility Criteria */}
+    
     <section className="bg-red-50 py-24 px-8 md:px-20">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold text-red-700 mb-4 text-center">Who Can Donate? </h2>
@@ -156,9 +142,7 @@ function Home() {
       </div>
     </section>
 
-    {/* --- */}
-
-    {/* How To Donate Section - Step-by-Step Focus */}
+   
     <section className="bg-white py-24 px-8 md:px-20">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold text-red-700 mb-4 text-center">Four Simple Steps to Donate</h2>
@@ -174,7 +158,7 @@ function Home() {
             <h3 className="text-xl font-bold mb-2 text-gray-800">Register</h3>
             <p className="text-gray-600">Sign up online or at one of our welcoming centers to begin.</p>
           </div>
-          {/* Step 2: Screening */}
+          
           <div className="p-8 rounded-xl bg-white border border-gray-100 shadow-md hover:shadow-lg transition duration-300">
             <div className="w-16 h-16 mx-auto mb-4 bg-red-100 rounded-full flex items-center justify-center">
               <span className="text-3xl font-extrabold text-red-600">2</span>
@@ -182,7 +166,7 @@ function Home() {
             <h3 className="text-xl font-bold mb-2 text-gray-800">Screening</h3>
             <p className="text-gray-600">A quick health check ensures safety for both you and the patient.</p>
           </div>
-          {/* Step 3: Donate */}
+         
           <div className="p-8 rounded-xl bg-white border border-gray-100 shadow-md hover:shadow-lg transition duration-300">
             <div className="w-16 h-16 mx-auto mb-4 bg-red-100 rounded-full flex items-center justify-center">
               <span className="text-3xl font-extrabold text-red-600">3</span>
@@ -190,7 +174,7 @@ function Home() {
             <h3 className="text-xl font-bold mb-2 text-gray-800">Donate</h3>
             <p className="text-gray-600">The safe and simple donation procedure, supervised by professionals.</p>
           </div>
-          {/* Step 4: Recovery */}
+          
           <div className="p-8 rounded-xl bg-white border border-gray-100 shadow-md hover:shadow-lg transition duration-300">
             <div className="w-16 h-16 mx-auto mb-4 bg-red-100 rounded-full flex items-center justify-center">
               <span className="text-3xl font-extrabold text-red-600">4</span>
@@ -202,7 +186,7 @@ function Home() {
       </div>
     </section>
 
-    {/* Success Stories - Testimonials Section */}
+  
     <section className="bg-red-50 py-24 px-8 md:px-20">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-4xl font-bold text-red-700 mb-4">Hear From Our Community</h2>
@@ -210,7 +194,7 @@ function Home() {
           The real impact of your generosity.
         </p>
         <div className="grid md:grid-cols-2 gap-8">
-          {/* Story 1: Recipient */}
+         
           <div className="bg-white p-10 rounded-2xl shadow-xl relative overflow-hidden">
             <blockquote className="italic text-gray-700 text-lg relative z-10">
               "I was critically ill, and the blood I received saved my life. Knowing there are people who care enough to donate is truly humbling. Thank you to all the donors!"
@@ -218,7 +202,7 @@ function Home() {
             <span className="block mt-6 font-semibold text-xl text-red-600 relative z-10">— Sarah A., Recipient</span>
             <span className="absolute right-4 bottom-4 text-7xl font-serif text-red-100">“</span>
           </div>
-          {/* Story 2: Donor */}
+          
           <div className="bg-white p-10 rounded-2xl shadow-xl relative overflow-hidden">
             <blockquote className="italic text-gray-700 text-lg relative z-10">
               "Donating blood gave me a sense of pride and a tangible contribution to the community. The process was easy, and the staff were wonderful. Highly recommend it."
@@ -230,7 +214,7 @@ function Home() {
       </div>
     </section>
 
-    {/* Call To Action - Strong and Centralized */}
+    
     <section className="bg-red-700 py-24 px-8 md:px-20 text-white text-center">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-5xl font-extrabold mb-4">Ready to Save a Life Today?</h2>

@@ -41,16 +41,15 @@ const Login = () => {
         return;
       }
 
-      // Store in localStorage (optional — good for persistence)
+    
       localStorage.setItem("token", data.accessToken);
       localStorage.setItem("user", JSON.stringify(data));
 
-      // Update Redux state
+
       dispatch(loginSuccess(data));
 
       toast.success("Login successful!");
 
-      // Redirect based on role
       if (data.role === "admin") {
         navigate("/admin", { replace: true });
       } else {
@@ -72,7 +71,7 @@ const Login = () => {
       <div className="min-h-screen bg-gradient-to-br from-red-50 to-white flex items-center justify-center p-4">
         <div className="bg-white rounded-2xl shadow-2xl overflow-hidden max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2">
 
-          {/* Left Side */}
+       
           <div
             className="hidden lg:flex items-center justify-center bg-cover bg-center relative"
             style={{
@@ -86,7 +85,7 @@ const Login = () => {
             </div>
           </div>
 
-          {/* Right Side - Form */}
+         
           <div className="p-8 lg:p-16 flex flex-col justify-center">
             <h2 className="text-4xl font-bold text-red-700 text-center mb-6">
               Welcome Back

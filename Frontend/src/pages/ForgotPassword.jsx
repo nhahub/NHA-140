@@ -33,7 +33,7 @@ const ForgotPassword = () => {
       <div className="min-h-screen bg-gradient-to-br from-red-50 to-white flex items-center justify-center p-4">
         <div className="bg-white rounded-2xl shadow-2xl overflow-hidden max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2">
 
-          {/* الصورة */}
+       
           <div className="hidden lg:flex items-center justify-center bg-cover bg-center relative"
             style={{ backgroundImage: "url('/WhatsApp Image 2025-11-01 at 20.08.39_f4d36964.jpg')" }}>
             <div className="absolute inset-0 bg-black bg-opacity-50"></div>
@@ -43,7 +43,7 @@ const ForgotPassword = () => {
             </div>
           </div>
 
-          {/* النموذج */}
+         
           <div className="p-8 lg:p-16 flex flex-col justify-center">
             <div className="text-center mb-10">
               <h2 className="text-4xl font-bold text-red-700">Forgot Password?</h2>

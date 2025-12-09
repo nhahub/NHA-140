@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import Contact from './Contact';
+import Contact from './Donate';
 
 function Navbar() {
    return (
@@ -9,8 +9,8 @@ function Navbar() {
         <img src="/logo1.png" alt="BloodBridge Logo" className="h-16 cursor-pointer" />
         <div className="flex items-center gap-6 text-gray-800 font-medium">
           <Link to="/" className="hover:text-red-600 transition-colors">Home</Link>
-          <Link to="/featured" className="hover:text-red-600 transition-colors">About Us</Link>
-          <Link to="/contact" className="hover:text-red-600 transition-colors">Donate</Link>
+          <Link to="/about-us" className="hover:text-red-600 transition-colors">About Us</Link>
+          <Link to="/donate" className="hover:text-red-600 transition-colors">Donate</Link>
           <Link to="/contact2" className="hover:text-red-600 transition-colors">Contact Us</Link>
         </div>
         <div className="flex gap-4">

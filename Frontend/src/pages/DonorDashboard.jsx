@@ -6,7 +6,7 @@ const DonorDashboard = ({ user }) => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-red-50 to-white p-6 flex flex-col items-center">
-      {/* Header / Welcome */}
+     
       <h1 className="text-4xl font-bold text-red-700 mb-4">
         Welcome, {user?.name || "User"}!
       </h1>
@@ -14,7 +14,6 @@ const DonorDashboard = ({ user }) => {
         This is your dashboard home. Here you can see your profile, your donation history, and latest updates.
       </p>
 
-      {/* Buttons / Actions */}
       <div className="flex flex-col md:flex-row gap-6">
         <button
           className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-xl shadow-lg transition-colors duration-300"
@@ -38,7 +37,7 @@ const DonorDashboard = ({ user }) => {
         </button>
       </div>
 
-      {/* Optional Section: Latest Updates */}
+      
       <div className="mt-12 max-w-3xl w-full">
         <h2 className="text-2xl font-bold text-gray-800 mb-4">Latest Updates</h2>
         <ul className="space-y-3 text-gray-700">

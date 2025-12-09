@@ -11,11 +11,11 @@ import Menu from "./components/Menu";
 import NewDonor from "./pages/NewDonor";
 import Donor from "./pages/Donor";
 import PublicLayout from "./pages/PublicLayout";
-import Featured from "./components/Featured";
-import Contact from "./components/Contact";
+
+import Donate from "./components/Donate";
 import Register from "./pages/Register";
 import ForgotPassword from "./pages/ForgotPassword";
-import PendingUsers from "./pages/PendingUsers";
+
 import Notifications from "./pages/Notifications";
 import ProtectedRoute from "./components/ProtectedRoute";
 import ContactUs from "./components/ContactUs";
@@ -23,7 +23,8 @@ import DonorDashboard from "./pages/DonorDashboard";
 import UserProfile from "./pages/UserProfile";
 import Donations from "./pages/Donations";
 import ResetPassword from "./pages/ResetPassword";
-import ChangePassword from "./pages/ResetPassword";
+
+import AboutUs from "./components/Aboutus";
 
 
 const Layout = () => {
@@ -94,8 +95,8 @@ const router = createBrowserRouter([
     element: <PublicLayout />,
     children: [
       { index: true, element: <Home /> },
-      { path: "featured", element: <Featured /> },
-      { path: "contact", element: <Contact /> },
+      { path: "about-us", element: <AboutUs /> },
+      { path: "donate", element: <Donate /> },
       { path: '/contact2', element: <ContactUs /> },
     ],
   },
@@ -140,7 +141,7 @@ const router = createBrowserRouter([
       { path: "prospect/:id", element: <Prospect /> },
       { path: "newdonor", element: <NewDonor /> },
       { path: "donor/:id", element: <Donor /> },
-      { path: "pending-users", element: <PendingUsers /> },
+      ,
     ],
   },
 

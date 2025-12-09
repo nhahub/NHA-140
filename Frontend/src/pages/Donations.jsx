@@ -6,7 +6,7 @@ const Donations = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Load user from localStorage
+   
     const storedUser = JSON.parse(localStorage.getItem("user"));
 
     if (!storedUser) {
@@ -14,7 +14,7 @@ const Donations = () => {
       return;
     }
 
-    // Fake Data until backend is connected
+  
     const sample = [
       {
         id: 1,
@@ -54,12 +54,11 @@ const Donations = () => {
   return (
     <div className="p-6 bg-gray-100 min-h-screen">
 
-      {/* Page Title */}
+      
       <h1 className="text-3xl font-bold text-red-600 mb-6 flex items-center gap-3">
         <FaHeart /> My Donations
       </h1>
 
-      {/* ===== Statistics ===== */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
         
         <div className="bg-white p-6 rounded-xl shadow-md border border-red-200">
@@ -83,14 +82,14 @@ const Donations = () => {
 
       </div>
 
-      {/* ===== Add Donation Button ===== */}
+     
       <div className="flex justify-end mb-6">
         <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-xl font-semibold flex items-center gap-2 shadow-md">
           <FaPlusCircle /> Add Donation
         </button>
       </div>
 
-      {/* ===== Donations Table ===== */}
+   
       <div className="overflow-x-auto">
         <table className="w-full bg-white rounded-xl shadow-md overflow-hidden">
           <thead className="bg-red-600 text-white">

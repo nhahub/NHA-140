@@ -34,7 +34,7 @@ const NewDonor = () => {
 
   return (
     <div className="flex justify-center items-start min-h-screen bg-gradient-to-b from-red-50 to-white p-10">
-      {/* Left Box */}
+    
       <div className="w-[450px] bg-white shadow-2xl rounded-3xl p-6 md:p-8 mr-5">
         <h2 className="text-2xl font-bold text-red-600 mb-6">New Donor</h2>
         <div className="flex flex-col space-y-4">
@@ -89,7 +89,7 @@ const NewDonor = () => {
         </div>
       </div>
 
-      {/* Right Box */}
+ 
       <div className="w-[450px] bg-white shadow-2xl rounded-3xl p-6 md:p-8 ml-5">
         <div className="flex flex-col space-y-4">
           <input

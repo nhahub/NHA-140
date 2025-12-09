@@ -147,5 +147,5 @@ module.exports = {
   registerUser,
   loginUser,
   forgotPassword,
-  updatePassword,
+  
 };

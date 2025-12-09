@@ -78,12 +78,7 @@ function Menu() {
               </li>
             </Link>
 
-            <Link to="/admin/pending-users" onClick={() => handleActiveLink("/admin/pending-users")}>
-              <li className={`flex items-center text-[20px] cursor-pointer mt-[20px] font-semibold transition-all
-                ${activeLink === "/admin/pending-users" ? "bg-red-500 text-white p-[12px] rounded-lg shadow-md" : "text-gray-700 hover:text-red-600"}`}>
-                <FaUserCheck className="mr-[15px]" /> Pending Registrations
-              </li>
-            </Link>
+           
           </>
         )}
 

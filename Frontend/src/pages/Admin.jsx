@@ -47,15 +47,15 @@ function Admin() {
     <div className="flex bg-gray-100 min-h-screen">
       <div className="flex-1 p-8 overflow-y-auto">
 
-        {/* Header */}
+        
         <div className="flex justify-between items-center mb-10">
           <h1 className="text-3xl font-bold text-black">Dashboard</h1>
         </div>
 
-        {/* === GRID CARDS === */}
+        
         <div className="grid grid-cols-3 gap-6 mb-10">
 
-          {/* CARD 1 */}
+         
           <div className="bg-white p-6 rounded-2xl shadow-md border border-gray-200
                           transition transform duration-300 hover:scale-105 hover:shadow-xl">
             <h2 className="font-semibold text-black mb-4">Total Prospects</h2>
@@ -72,7 +72,7 @@ function Admin() {
             <p className="text-center text-gray-600 mt-4">Registered Prospects</p>
           </div>
 
-          {/* CARD 2 */}
+          
           <div className="bg-white p-6 rounded-2xl shadow-md border border-gray-200
                           transition transform duration-300 hover:scale-105 hover:shadow-xl">
             <h2 className="font-semibold text-black mb-4">Total Donors</h2>
@@ -89,7 +89,6 @@ function Admin() {
             <p className="text-center text-gray-600 mt-4">All Registered Donors</p>
           </div>
 
-          {/* CARD 3 */}
           <div className="bg-white p-6 rounded-2xl shadow-md border border-gray-200
                           transition transform duration-300 hover:scale-105 hover:shadow-xl">
             <h2 className="font-semibold text-black mb-4">Unit Status</h2>
@@ -107,10 +106,10 @@ function Admin() {
           </div>
         </div>
 
-        {/* === ROW 2 === */}
+        
         <div className="grid grid-cols-2 gap-8">
 
-          {/* RECENT DONORS */}
+        
           <div className="bg-white p-6 rounded-2xl shadow-md border border-gray-200
                           transition transform duration-300 hover:shadow-xl">
             <h2 className="font-semibold text-black mb-4">Recent Donors</h2>
@@ -136,7 +135,7 @@ function Admin() {
             </div>
           </div>
 
-          {/* MAP */}
+          
           <div className="bg-white p-6 rounded-2xl shadow-md border border-gray-200
                           transition transform duration-300 hover:shadow-xl">
             <h2 className="font-semibold text-black mb-4">Track Nearby Donors</h2>
